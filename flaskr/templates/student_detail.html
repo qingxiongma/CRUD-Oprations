@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Student Detail Page</h2>
+<table >
+<tr>
+<td>Name: </td> 
+<td>{{detail[0]}} </td>
+</tr>
+<tr> 
+<td>Phone: </td> 
+<td>{{detail[1]}} </td>
+</tr>
+<tr>
+<td>email: </td> 
+<td>{{detail[2]}} </td>
+ </tr>
+<tr>
+<td>Address: </td> 
+<td>{{detail[3]}} </td>
+ </tr>
+</table>
+
+{% endblock %}

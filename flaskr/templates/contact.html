@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+  <form method="POST" action="/"> 
+   {{form.csrf_token}}
+      <div class="form-field">
+      {{ form.name.label }} 
+      {{ form.name(size=20) }} 
+      {% for error in form.name.errors %}{{ error }}  
+      {% endfor %}
+</div>
+      <div class="form-field">
+      {{ form.email.label }}
+       {{ form.email }}</div>
+    {% for error in form.email.errors %}{{ error }}  
+      {% endfor %}
+
+      <div class="form-field">{{ form.body.label }} {{ form.body }}</div>
+      {{ form.submit }}
+  </form>
+
+  
+
+<address>
+    Dockery 300 D<br />
+    Warrensburg, MO 64093<br />
+    <abbr title="Phone">P:</abbr>
+    660.441.0100
+</address>
+
+<address>
+    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+</address>
+
+{% endblock %}
